@@ -83,41 +83,16 @@ Check out a few resources that may come in handy when working with NestJS:
 - To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
 - Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
-## Как запустить?
+## Support
 
-- npm start:dev / npm start (в зависимости от того, это продакшн или девелопмент)
-Порты разные всегда у двух способов запуска, например 4000 или 5000
-- ОШИБКИ
-`
-При попытке писать 4004 напрмиер порт, будет ошибка, 7777 напрмиер подойдет, 4004 - нет
-`
-- .development.env прописываем, для портов и подключения к БД
-- Разделяем по папкам, например у users свои сонтроллеры, сервисы или модули
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Как создать проект по шагам
-1. Как уже сказано создаем через CLI папки, сущности, пользователи, проекты, и.т.д
-2. Внутри них пишем модели, это таблицы для БД, там прописываем и типы данных, это создаст таблицу
-в нашем случае в POSTGRES. Внутри уже сервисов прописываем что сервер сможет делать.
-А именно, получить данные, изменить и.т.д
-- Далее импортируем модель в МОДУЛЬ:
-- `
-imports: [SequelizeModule.forFeature([User])],
-`
+## Stay in touch
 
+- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-- Следуя правилам:
-1. Модуль это подъезд
-2. Контроллеры - точки входа, двери в комнаты
-3. Сервисы - комнаты, где что-то происходит, где все механизмы. Там
-можно манипулировать с БД, получать/менять данные
-4. Далее прописываем сервисы, сощдаем ДТО (объекты которые просто передают данные между
-клиент-сервером или сервер-сервером (ПОДСИСТЕМАМИ))
+## License
 
-## ПИШЕМ СЕРВИС
-1. Создадим ДТО объект с полями простыми. Для создания пользователя:
-```
-export class CreateUserDto{
-  readonly email: string;
-  readonly password: string;
-}
-```
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
